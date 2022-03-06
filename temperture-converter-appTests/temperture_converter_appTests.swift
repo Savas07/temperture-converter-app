@@ -1,10 +1,3 @@
-//
-//  temperture_converter_appTests.swift
-//  temperture-converter-appTests
-//
-//  Created by Öznur Altıntaş on 4.03.2022.
-//
-
 import XCTest
 @testable import temperture_converter_app
 

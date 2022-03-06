@@ -1,10 +1,3 @@
-//
-//  temperture_converter_appUITestsLaunchTests.swift
-//  temperture-converter-appUITests
-//
-//  Created by Öznur Altıntaş on 4.03.2022.
-//
-
 import XCTest
 
 class temperture_converter_appUITestsLaunchTests: XCTestCase {

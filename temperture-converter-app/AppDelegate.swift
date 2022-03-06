@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  temperture-converter-app
-//
-//  Created by Öznur Altıntaş on 4.03.2022.
-//
-
 import UIKit
 
 @main
