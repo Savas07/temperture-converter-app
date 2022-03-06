@@ -1,24 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uef-T8-0lF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Temperture Converter-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="temperture_converter_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uoz-Q4-CuN">
+                                <rect key="frame" x="100" y="168" width="214" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qAU-7x-a9d">
+                                <rect key="frame" x="122.5" y="217" width="169" height="32"/>
+                                <segments>
+                                    <segment title="Fahrenheit"/>
+                                    <segment title="Kelvin"/>
+                                </segments>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <color key="selectedSegmentTintColor" systemColor="linkColor"/>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="XeG-IA-0kC"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Degree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf7-PM-UJC">
+                                <rect key="frame" x="100" y="148" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MdO-eC-MRm">
+                                <rect key="frame" x="100" y="280" width="214" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Celcius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f8-6r-b1c">
+                                <rect key="frame" x="100" y="263" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTA-fI-zZ3">
+                                <rect key="frame" x="100" y="334" width="214" height="31.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="CALCULATE">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NBX-PA-M24"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bf7-PM-UJC" secondAttribute="trailing" symbolic="YES" id="65b-YO-9uA"/>
+                            <constraint firstItem="qAU-7x-a9d" firstAttribute="top" secondItem="Uoz-Q4-CuN" secondAttribute="bottom" constant="15" id="7zM-4M-XEw"/>
+                            <constraint firstItem="Uoz-Q4-CuN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="8Ir-fz-u6y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6f8-6r-b1c" secondAttribute="trailing" constant="258" id="97x-Nn-wst"/>
+                            <constraint firstItem="qAU-7x-a9d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AOU-vz-zHK"/>
+                            <constraint firstItem="Uoz-Q4-CuN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OnP-VF-zhP"/>
+                            <constraint firstItem="Uoz-Q4-CuN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="SXK-lv-ApW"/>
+                            <constraint firstItem="bf7-PM-UJC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="TDy-Qc-9bc"/>
+                            <constraint firstItem="bf7-PM-UJC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="XU8-g0-XDN"/>
+                            <constraint firstItem="6f8-6r-b1c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="ahO-J2-FDU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kTA-fI-zZ3" secondAttribute="trailing" constant="100" id="bBz-XV-4lU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uoz-Q4-CuN" secondAttribute="trailing" constant="100" id="cxs-7G-9O9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MdO-eC-MRm" secondAttribute="trailing" constant="100" id="eky-ML-3CP"/>
+                            <constraint firstItem="MdO-eC-MRm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="fZk-Tf-7mD"/>
+                            <constraint firstItem="kTA-fI-zZ3" firstAttribute="top" secondItem="MdO-eC-MRm" secondAttribute="bottom" constant="20" id="hL1-6u-H3T"/>
+                            <constraint firstItem="6f8-6r-b1c" firstAttribute="top" secondItem="qAU-7x-a9d" secondAttribute="bottom" constant="15" id="koL-NP-bd5"/>
+                            <constraint firstItem="kTA-fI-zZ3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="lhr-Xm-A39"/>
+                            <constraint firstItem="MdO-eC-MRm" firstAttribute="top" secondItem="qAU-7x-a9d" secondAttribute="bottom" constant="32" id="m9F-ZO-YWc"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Temperture Converter" id="6oz-xd-Zrg"/>
+                    <connections>
+                        <outlet property="celciusOutput" destination="MdO-eC-MRm" id="uQr-F9-R6c"/>
+                        <outlet property="degreeLabel" destination="Uoz-Q4-CuN" id="0vN-8t-wGk"/>
+                        <outlet property="tempertureSelector" destination="qAU-7x-a9d" id="dbG-Tq-s8Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="326.08695652173918" y="-26.116071428571427"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NA1-kC-RXS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uef-T8-0lF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="huV-uj-7hd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ihR-ae-cvm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RaN-Dz-oqo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-584.05797101449275" y="-26.116071428571427"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
